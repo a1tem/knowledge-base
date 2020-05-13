@@ -11,6 +11,7 @@ Via Composer
 
 ``` bash
 $ composer require a1tem/knowledge-base
+$ php artisan migrate
 ```
 
 ``` bash
@@ -20,6 +21,11 @@ $ npm install
 ```
 
 We use Passport in order to perform the API calls
+
+``` bash
+
+$ php artisan passport:install
+```
 
 Don't forget to change the api -> driver to 'passport' in your config/auth.php file
 ``` bash
@@ -37,12 +43,19 @@ Don't forget to change the api -> driver to 'passport' in your config/auth.php f
     ],
 ```
 
-php artisan migrate
-php artisan passport:install
-
 Add HasApiTokens trait to the User model.
 
 \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class, to app/Http/Kernel
+
+Add to app/Providers/AuthServiceProvider.php file into the boot function:
+
+```php
+public function boot()
+    {
+        /// ....
+        Passport::routes();
+    }
+```
 
 ```php
 <?php
@@ -64,7 +77,12 @@ EncryptCookies => protected static $serialize = true;
 
 VerifyCsrfToken => exclude path 'knowledge-base/*'
 
-Add <meta name="csrf-token" content="{{ csrf_token() }}"> to the main blade file
+Add this to your main blade file or to the views/layout/app.blade.php if it's not included yet.
+
+```html
+<meta name="csrf-token" content="{{ csrf_token() }}">
+```
+
 ## Usage
 First of all we should publish all the package assets
 
