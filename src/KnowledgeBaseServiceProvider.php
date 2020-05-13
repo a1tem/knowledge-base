@@ -80,7 +80,7 @@ class KnowledgeBaseServiceProvider extends ServiceProvider
 
         // Publishing the translation files.
         $this->publishes([
-            __DIR__.'/../resources/lang' => resource_path('lang/vendor/a1tem'),
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/a1tem/knowledge-base'),
         ], 'knowledge-base.views');
 
 

@@ -19,7 +19,7 @@ class FrontendController extends Controller
      */
     public function categories(): View
     {
-        return view('vendor.a1tem.categories');
+        return view('vendor.a1tem.knowledge-base.categories');
     }
 
     /**
@@ -27,7 +27,7 @@ class FrontendController extends Controller
      */
     public function articles(): View
     {
-        return view('vendor.a1tem.articles');
+        return view('vendor.a1tem.knowledge-base.articles');
     }
 
     /**
@@ -37,7 +37,7 @@ class FrontendController extends Controller
      */
     public function editArticle(string $slug): View
     {
-        return view('vendor.a1tem.edit-article', ['id' => $slug]);
+        return view('vendor.a1tem.knowledge-base.edit-article', ['id' => $slug]);
     }
 
     /**
@@ -45,7 +45,7 @@ class FrontendController extends Controller
      */
     public function createArticle(): View
     {
-        return view('vendor.a1tem.create-article');
+        return view('vendor.a1tem.knowledge-base.create-article');
     }
 
     /**
@@ -55,6 +55,6 @@ class FrontendController extends Controller
      */
     public function viewArticle(string $slug): View
     {
-        return view('vendor.a1tem.view-article', ['id' => $slug]);
+        return view('vendor.a1tem.knowledge-base.view-article', ['id' => $slug]);
     }
 }

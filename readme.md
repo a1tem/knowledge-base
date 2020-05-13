@@ -45,9 +45,7 @@ Don't forget to change the api -> driver to 'passport' in your config/auth.php f
 
 Add HasApiTokens trait to the User model.
 
-\Laravel\Passport\Http\Middleware\CreateFreshApiToken::class, to app/Http/Kernel
-
-Add to app/Providers/AuthServiceProvider.php file into the boot function:
+Add Passport::routes(); to app/Providers/AuthServiceProvider.php file into the boot function:
 
 ```php
 public function boot()
@@ -56,6 +54,8 @@ public function boot()
         Passport::routes();
     }
 ```
+
+\Laravel\Passport\Http\Middleware\CreateFreshApiToken::class, to app/Http/Kernel
 
 ```php
 <?php
@@ -75,7 +75,15 @@ public function boot()
 EncryptCookies => protected static $serialize = true;
 ```
 
-VerifyCsrfToken => exclude path 'knowledge-base/*'
+Http/Middleware/VerifyCsrfToken.php add to the $except array 'knowledge-base/*'
+
+```php
+
+    protected $except = [
+        'knowledge-base/*'
+    ];
+
+```
 
 Add this to your main blade file or to the views/layout/app.blade.php if it's not included yet.
 
@@ -96,12 +104,28 @@ The published components will be placed in your resources/js directory. Once the
 require('./knowledge-base/knowledge-base');
 ```
 
-
-
+After that run:
+``` bash
+$ npm run dev
+```
 
 ## Use it with blade files
 
--- todo
+By default the module will work in NON_SPA mode, it means that you can use it directly by typing the url address:
+
+* To view all categories 
+
+/knowledge-base/view/categories
+
+* To view all articles
+
+/knowledge-base/view/articles
+
+You can find all the published view files in the resources/views/vendor/a1tem/knowledge-base folder and modify the style as you want.
+
+Also you are able to modify the VUE files as well, to find them navigate to resources/js/knowledge-base/views folder.
+
+Don't forget to rebuild the assets by running npm run dev after modifying the vue files.
 ## Use it in the SPA applications
 
 -- todo
