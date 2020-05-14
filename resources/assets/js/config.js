@@ -13,5 +13,6 @@ export const APP_CONFIG = {
     VIEW_ARTICLE: '/knowledge-base/view/article/view',
     EDIT_ARTICLE: '/knowledge-base/view/article/edit',
     ARTICLES_OVERVIEW: '/knowledge-base/view/articles',
+    CATEGORIES_OVERVIEW: '/knowledge-base/view/categories',
   }
 };

@@ -75,7 +75,7 @@ class KnowledgeBaseServiceProvider extends ServiceProvider
 
         // Publishing the views.
         $this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/a1tem'),
+            __DIR__.'/../resources/views' => base_path('resources/views/vendor/a1tem/knowledge-base'),
         ], 'knowledge-base.views');
 
         // Publishing the translation files.

@@ -92,10 +92,10 @@ Add this to your main blade file or to the views/layout/app.blade.php if it's no
 ```
 
 ## Usage
-First of all we should publish all the package assets
+First of all we should publish all the package assets, to do so run this command in the console
 
 ``` bash
-$ artisan vendor:publish
+$ artisan vendor:publish --provider="A1tem\KnowledgeBase\KnowledgeBaseServiceProvider"
 ```
 
 The published components will be placed in your resources/js directory. Once the components have been published, you should register them in your resources/js/app.js file somewhere at the top section add:
@@ -128,7 +128,36 @@ Also you are able to modify the VUE files as well, to find them navigate to reso
 Don't forget to rebuild the assets by running npm run dev after modifying the vue files.
 ## Use it in the SPA applications
 
--- todo
+* If you want to use this package in the SPA mode, you have to change in the knowledge-base/config.js file:
+
+```js
+MODE: MODE_SPA
+```
+
+* Then you have to include in your router file:
+```js
+import { KNOWLEDGE_BASE_ROUTER } from './knowledge-base/knowledge-base-router';
+
+export default new VueRouter({
+  mode: 'history',
+  linkActiveClass: 'active',
+  routes: [
+    {
+      path: '/',
+      component: Vue.component('Layout', require('./Layout.vue').default),
+      children: [
+        // Your routes here
+      ].concat(KNOWLEDGE_BASE_ROUTER),
+    },
+  ],
+});
+```
+
+You can examine the 'knowledge-base/knowledge-base-router.js' file and change it in the way that the best suited for your application.
+## Configuration
+
+You can configure different aspects of the package, check config/knowledge-base.php file.
+
 ## Testing
 Tests system is under development.
 
