@@ -15,6 +15,7 @@ It's a laravel package that allows you to install the knowledge base management 
 - Search by article title and content and also by additional fields
 - Validation on additional fields
 - Pagination
+- Fully customizable as you have access to all the Vue components
 
 ## Demo
 
