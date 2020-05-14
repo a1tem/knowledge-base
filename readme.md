@@ -130,6 +130,7 @@ If you discover any security related issues, please email artempetrusenko@gmail.
 
 [Element][link-element] - A Vue 2.0 based component library for developers, designers and product managers
 
+[Vue2Editor][link-vue2-editor] - Vue.js editor for rich text editing built with Vue.js and Quill.js
 
 ## License
 
@@ -143,4 +144,5 @@ Knowledge base system is open-sourced software licensed under the MIT license.
 [link-laravel]: https://laravel.com
 [link-vuejs]: https://vuejs.org
 [link-element]: https://element.eleme.io/
+[link-vue2-editor]: https://www.vue2editor.com/
 [link-passport-installation]: https://laravel.com/docs/7.x/passport#installation
