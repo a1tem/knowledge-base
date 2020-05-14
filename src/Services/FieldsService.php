@@ -71,17 +71,6 @@ class FieldsService
             $metaData
         );
 
-        if ($type === Field::TYPE_SELECT) {
-            $attributes = Attribute::where('category_field_id', $field->id)->get();
-
-            foreach ($attributes as $attr) {
-                if (!in_array($attr->value, $metaData['values'])) {
-                    $attr->value = $defaultValue;
-                    $attr->save();
-                }
-            }
-        }
-
         return $result;
     }
 }

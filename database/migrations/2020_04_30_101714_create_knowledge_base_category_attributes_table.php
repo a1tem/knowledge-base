@@ -22,7 +22,7 @@ class CreateKnowledgeBaseCategoryAttributesTable extends Migration
         Schema::create(config('knowledge-base.table_prefix') . 'category_attributes', function (Blueprint $table) {
             $table->unsignedInteger('article_id');
             $table->unsignedInteger('category_field_id');
-            $table->string('value')->nullable();
+            $table->longText('value')->nullable();
             $table->timestamps();
 
             $table

@@ -17,6 +17,7 @@ import {
   FormItem,
   Option,
   DatePicker,
+  Pagination,
 } from 'element-ui';
 
 locale.use(lang);
@@ -34,6 +35,7 @@ Vue.component('el-form', Form);
 Vue.component('el-form-item', FormItem);
 Vue.component('el-option', Option);
 Vue.component('el-date-picker', DatePicker);
+Vue.component('el-pagination', Pagination);
 Vue.component('knowledge-base-overview', require('./views/KnowledgeBaseOverview').default);
 Vue.component('knowledge-base-category-overview', require('./views/KnowledgeBaseCategoryOverview').default);
 Vue.component('knowledge-base-article-view', require('./views/Article').default);
