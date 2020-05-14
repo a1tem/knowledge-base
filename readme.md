@@ -20,62 +20,16 @@ $ npm add element-ui axios vue2-editor
 $ npm install
 ```
 
-We use Passport in order to perform the API calls
+## Passport installation
+We use Passport in order to perform the API calls, if you already use passport, just skip this part.
 
-``` bash
+The full installation process can be found in the [Passport Docs][link-passport-installation]
 
-$ php artisan passport:install
-```
-
-Don't forget to change the api -> driver to 'passport' in your config/auth.php file
-``` bash
-'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
-
-        'api' => [
-            'driver' => 'passport',
-            'provider' => 'users',
-            'hash' => false,
-        ],
-    ],
-```
-
-Add HasApiTokens trait to the User model.
-
-Add Passport::routes(); to app/Providers/AuthServiceProvider.php file into the boot function:
-
+After that just add to the **Http/Middleware/EncryptCookies.php** file:
 ```php
-public function boot()
-    {
-        /// ....
-        Passport::routes();
-    }
+protected static $serialize = true;
 ```
-
-\Laravel\Passport\Http\Middleware\CreateFreshApiToken::class, to app/Http/Kernel
-
-```php
-<?php
-    protected $middlewareGroups = [
-        'web' => [
-            //...
-            \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
-        ],
-
-        'api' => [
-            'throttle:60,1',
-            'bindings',
-        ],
-    ];
-```
-```php
-EncryptCookies => protected static $serialize = true;
-```
-
-Http/Middleware/VerifyCsrfToken.php add to the $except array 'knowledge-base/*'
+And add to the $except array **'knowledge-base/'** of the Http/Middleware/VerifyCsrfToken.php file:
 
 ```php
 
@@ -115,11 +69,11 @@ By default the module will work in NON_SPA mode, it means that you can use it di
 
 * To view all categories 
 
-/knowledge-base/view/categories
+**/knowledge-base/view/categories**
 
 * To view all articles
 
-/knowledge-base/view/articles
+**/knowledge-base/view/articles**
 
 You can find all the published view files in the resources/views/vendor/a1tem/knowledge-base folder and modify the style as you want.
 
@@ -189,3 +143,4 @@ Knowledge base system is open-sourced software licensed under the MIT license.
 [link-laravel]: https://laravel.com
 [link-vuejs]: https://vuejs.org
 [link-element]: https://element.eleme.io/
+[link-passport-installation]: https://laravel.com/docs/7.x/passport#installation
