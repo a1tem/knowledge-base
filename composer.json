@@ -9,7 +9,7 @@
         }
     ],
     "homepage": "https://github.com/a1tem/knowledge-base",
-    "keywords": ["Laravel", "KnowledgeBase"],
+    "keywords": ["Laravel", "KnowledgeBase", "Faq", "Knowledge base management system"],
     "require": {
         "php": ">=7.2",
         "illuminate/support": "~5|~6|~7",

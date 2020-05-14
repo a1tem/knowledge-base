@@ -3,7 +3,22 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Knowledge base management system.
+## Knowledge base management system.
+
+It's a laravel package that allows you to install the knowledge base management system into your site:
+
+#### Key features
+
+- Categories
+- Categories can have additional fields (text, textarea, number, select, date, checkbox)
+- When user creates the article, he should also fill all the additional fields that belong to the category
+- Search by article title and content and also by additional fields
+- Validation on additional fields
+- Pagination
+
+## Demo
+
+-- todo
 
 ## Installation
 
