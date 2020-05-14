@@ -9,7 +9,7 @@ use Illuminate\Support\Collection;
  * Class ArticleSearchService
  *
  * @package A1tem\KnowledgeBase\Services
- * @author  Artem Petrusenko <artem.petrusenko@itdelight.com>
+ * @author  Artem Petrusenko <artempetrusenko@gmail.com>
  */
 class ArticleSearchService
 {

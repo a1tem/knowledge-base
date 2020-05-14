@@ -10,7 +10,7 @@ use Illuminate\View\View;
  * Class FrontendController
  *
  * @package A1tem\KnowledgeBase\Controllers
- * @author  Artem Petrusenko <artem.petrusenko@itdelight.com>
+ * @author  Artem Petrusenko <artempetrusenko@gmail.com>
  */
 class FrontendController extends Controller
 {

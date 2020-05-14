@@ -8,7 +8,7 @@ use A1tem\KnowledgeBase\Models\Category;
  * Class CategoryService
  *
  * @package A1tem\KnowledgeBase\Services
- * @author  Artem Petrusenko <artem.petrusenko@itdelight.com>
+ * @author  Artem Petrusenko <artempetrusenko@gmail.com>
  */
 class CategoryService
 {
