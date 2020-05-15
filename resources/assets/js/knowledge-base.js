@@ -6,6 +6,7 @@ import Vue from 'vue';
 import {
   Select,
   Input,
+  InputNumber,
   Checkbox,
   TableColumn,
   Button,
@@ -25,6 +26,7 @@ locale.use(lang);
 Vue.component('el-select', Select);
 Vue.component('el-checkbox', Checkbox);
 Vue.component('el-input', Input);
+Vue.component('el-input-number', InputNumber);
 Vue.component('el-table', Table);
 Vue.component('el-button', Button);
 Vue.component('el-menu', Menu);
