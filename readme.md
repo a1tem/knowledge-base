@@ -19,7 +19,10 @@ It's a laravel package that allows you to install the knowledge base management 
 
 ## Demo
 
--- todo
+#### Articles
+![Articles](docs/articles.gif)
+#### Categories
+![Categories](docs/categories.gif)
 
 ## Installation
 
