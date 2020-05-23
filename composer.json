@@ -28,8 +28,10 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "A1tem\\KnowledgeBase\\Tests\\": "tests"
-        }
+            "A1tem\\KnowledgeBase\\Tests\\": "tests",
+            "A1tem\\KnowledgeBase\\TestUtilities\\": "tests/utilities/"
+        },
+        "files": ["tests/utilities/functions.php"]
     },
     "extra": {
         "laravel": {
@@ -40,5 +42,9 @@
                 "KnowledgeBase": "A1tem\\KnowledgeBase\\Facades\\KnowledgeBase"
             }
         }
+    },
+    "scripts": {
+        "phpunit": "vendor/bin/phpunit",
+        "phpunit-f": "vendor/bin/phpunit --filter"
     }
 }

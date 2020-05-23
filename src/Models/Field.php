@@ -12,7 +12,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class Field extends BaseModel
 {
-    protected $table = 'category_fields';
+    const TABLE_NAME = 'category_fields';
+    protected $table = self::TABLE_NAME;
 
     const TYPE_TEXT = 'text';
     const TYPE_TEXTAREA = 'textarea';

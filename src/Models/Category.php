@@ -12,7 +12,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class Category extends BaseModel
 {
-    protected $table = 'categories';
+    const TABLE_NAME = 'categories';
+    protected $table = self::TABLE_NAME;
 
     protected $fillable = [
         'name',

@@ -10,8 +10,12 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="Package">
-            <directory suffix=".php">./tests/</directory>
+        <testsuite name="Feature">
+            <directory suffix=".php">./tests/Feature</directory>
+        </testsuite>
+
+        <testsuite name="Unit">
+            <directory suffix=".php">./tests/Unit</directory>
         </testsuite>
     </testsuites>
     <filter>
@@ -19,4 +23,7 @@
             <directory>src/</directory>
         </whitelist>
     </filter>
+    <php>
+        <env name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
+    </php>
 </phpunit>

@@ -1,2 +1,6 @@
 /node_modules
 /.idea
+/vendor
+.idea/*
+.phpunit.result.cache
+git rm --cached .idea

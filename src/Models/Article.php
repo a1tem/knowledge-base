@@ -14,7 +14,9 @@ use Illuminate\Support\Str;
  */
 class Article extends BaseModel
 {
-    protected $table = 'articles';
+    const TABLE_NAME = 'articles';
+
+    protected $table = self::TABLE_NAME;
 
     public function getRouteKeyName()
     {

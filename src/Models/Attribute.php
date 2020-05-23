@@ -14,7 +14,8 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
  */
 class Attribute extends Pivot
 {
-    protected $table = 'category_attributes';
+    const TABLE_NAME = 'category_attributes';
+    protected $table = self::TABLE_NAME;
 
     protected $with = [
         'field'

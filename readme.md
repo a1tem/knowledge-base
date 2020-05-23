@@ -132,7 +132,14 @@ You can examine the 'knowledge-base/knowledge-base-router.js' file and change it
 You can configure different aspects of the package, check config/knowledge-base.php file.
 
 ## Testing
-Tests system is under development.
+
+```bash
+$ composer phpunit
+
+or
+
+$ vendor/bin/phpunit
+```
 
 ## Security
 

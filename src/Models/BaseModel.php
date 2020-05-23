@@ -22,4 +22,12 @@ class BaseModel extends Model
         parent::__construct($attributes);
         $this->setTable(config('knowledge-base.table_prefix') . $this->getTable());
     }
+
+    /**
+     * @return string
+     */
+    public static function getTableName(): string
+    {
+        return config('knowledge-base.table_prefix') . static::TABLE_NAME;
+    }
 }
